@@ -1,7 +1,7 @@
-package hello.controller;
+package jp.co.forthelocal.template.spring.application.controllers;
 
-import hello.data.UserMapper;
-import hello.model.User;
+import jp.co.forthelocal.template.spring.domain.repositories.UserMapper;
+import jp.co.forthelocal.template.spring.domain.entities.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

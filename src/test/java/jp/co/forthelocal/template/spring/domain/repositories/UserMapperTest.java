@@ -1,11 +1,12 @@
-package hello.data;
+package jp.co.forthelocal.template.spring.domain.repositories;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.Reader;
 import java.sql.SQLException;
 
-import hello.model.User;
+import jp.co.forthelocal.template.spring.domain.entities.User;
+import jp.co.forthelocal.template.spring.domain.repositories.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

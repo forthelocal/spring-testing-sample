@@ -1,4 +1,4 @@
-package hello.model;
+package jp.co.forthelocal.template.spring.domain.entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -8,11 +8,6 @@ class UserTest {
 
 	@Test
 	void getNameReturnsName() {
-		assertEquals(2, 1 + 1);
-	}
-
-	@Test
-	void getNameReturnsName2() {
 		assertEquals(2, 1 + 1);
 	}
 

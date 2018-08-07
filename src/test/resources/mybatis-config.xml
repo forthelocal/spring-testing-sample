@@ -37,7 +37,7 @@
     </environments>
 
     <mappers>
-        <package name="hello.data"/>
+        <package name="jp.co.forthelocal.template.spring.domain.repositories"/>
     </mappers>
 
 </configuration>

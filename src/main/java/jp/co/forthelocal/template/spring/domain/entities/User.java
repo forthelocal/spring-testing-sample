@@ -1,4 +1,4 @@
-package hello.model;
+package jp.co.forthelocal.template.spring.domain.entities;
 
 public class User {
 

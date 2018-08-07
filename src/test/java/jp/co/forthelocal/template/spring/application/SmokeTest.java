@@ -1,8 +1,8 @@
-package hello.contorller;
+package jp.co.forthelocal.template.spring.application;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import hello.controller.HomeController;
+import jp.co.forthelocal.template.spring.application.controllers.HomeController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 

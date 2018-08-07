@@ -1,4 +1,4 @@
-package hello;
+package jp.co.forthelocal.template.spring.application;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

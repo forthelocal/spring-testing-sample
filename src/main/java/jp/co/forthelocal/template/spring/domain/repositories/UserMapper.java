@@ -1,6 +1,6 @@
-package hello.data;
+package jp.co.forthelocal.template.spring.domain.repositories;
 
-import hello.model.User;
+import jp.co.forthelocal.template.spring.domain.entities.User;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

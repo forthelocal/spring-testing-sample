@@ -1,4 +1,4 @@
-package hello.controller;
+package jp.co.forthelocal.template.spring.application.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
