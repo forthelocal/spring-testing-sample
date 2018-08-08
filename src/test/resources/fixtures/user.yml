@@ -1,0 +1,3 @@
+user:
+  name: ${faker.name.name}
+  email: ${faker.internet.emailAddress}

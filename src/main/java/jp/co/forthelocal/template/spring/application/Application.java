@@ -1,6 +1,6 @@
 package jp.co.forthelocal.template.spring.application;
 
-import jp.co.forthelocal.template.spring.domain.repositories.UserMapper;
+import jp.co.forthelocal.template.spring.domain.repositories.UserRepository;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,10 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("jp.co.forthelocal.template.spring.domain.repositories")
 public class Application implements CommandLineRunner {
 
-	private final UserMapper userMapper;
+	private final UserRepository userRepository;
 
-	public Application(UserMapper userMapper) {
-		this.userMapper = userMapper;
+	public Application(UserRepository userRepository) {
+		this.userRepository = userRepository;
 	}
 
 	public static void main(String[] args) {
@@ -23,6 +23,6 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println(this.userMapper.findByName("First"));
+		System.out.println(this.userRepository.findByName("First"));
 	}
 }

@@ -29,9 +29,9 @@
             <transactionManager type="JDBC"/>
             <dataSource type="UNPOOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/db_example?autoReconnect=true&amp;useSSL=false"/>
-                <property name="username" value="springuser"/>
-                <property name="password" value="ThePassword"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/db_example_test?autoReconnect=true&amp;useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value=""/>
             </dataSource>
         </environment>
     </environments>
