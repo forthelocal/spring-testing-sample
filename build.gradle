@@ -48,6 +48,8 @@ dependencies {
     testCompile 'io.beanmother:beanmother-core:0.8.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    testCompile 'com.codeborne:selenide:4.12.3'
+
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
 
     checkstyle 'io.spring.javaformat:spring-javaformat-checkstyle:0.0.6'
@@ -63,12 +65,4 @@ test {
     reports {
         html.enabled = true
     }
-}
-
-flyway {
-    url = 'jdbc:mysql://localhost:3306/db_example'
-    user = 'springuser'
-    password = 'ThePassword'
-    baselineOnMigrate = true
-
 }
