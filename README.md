@@ -8,6 +8,7 @@
 - Flyway
 - Junit5
 - beanmother
+- Selenide
 
 ## How to use
 - create databases
@@ -17,6 +18,7 @@
   ```
   
 - ./gradlew clean test
-  - build/reports/tests/test にテスト結果が出力される
+  - build/reports/tests にキャプチャが出力される
+  - build/reports/tests/test にテスト結果のHTMLが出力される
 - ./gradlew flywayMigrate  
 - ./gradlew bootRun
