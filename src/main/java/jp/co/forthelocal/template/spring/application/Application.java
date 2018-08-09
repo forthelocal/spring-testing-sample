@@ -1,28 +1,28 @@
 package jp.co.forthelocal.template.spring.application;
 
-import jp.co.forthelocal.template.spring.domain.repositories.UserRepository;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.CommandLineRunner;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.core.env.AbstractEnvironment;
+import org.springframework.core.env.SimpleCommandLinePropertySource;
 
 @SpringBootApplication
 @MapperScan("jp.co.forthelocal.template.spring.domain.repositories")
-public class Application implements CommandLineRunner {
-
-	private final UserRepository userRepository;
-
-	public Application(UserRepository userRepository) {
-		this.userRepository = userRepository;
-	}
+public class Application {
 
 	public static void main(String[] args) {
+		setDefaultProfile(args);
 		SpringApplication.run(Application.class, args);
 	}
 
+	private static void setDefaultProfile(String[] args) {
+		SimpleCommandLinePropertySource source = new SimpleCommandLinePropertySource(args);
+		if (!source.containsProperty("spring.profiles.active") &&
+				!System.getenv().containsKey("SPRING_PROFILES_ACTIVE")) {
 
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println(this.userRepository.findByName("First"));
+			System.setProperty(AbstractEnvironment.ACTIVE_PROFILES_PROPERTY_NAME, "dev");
+		}
 	}
+
 }

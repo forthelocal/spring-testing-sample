@@ -1,12 +1,7 @@
 package jp.co.forthelocal.template.spring.test;
 
-import javax.sql.DataSource;
 import java.io.IOException;
-import java.io.Reader;
 
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -33,13 +28,12 @@ public class Bootstrap implements BeforeAllCallback {
 	}
 
 	private void migrate() throws IOException {
-		Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
-		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-		sqlSessionFactory.getConfiguration();
-		DataSource ds = sqlSessionFactory.getConfiguration().getEnvironment().getDataSource();
 
 		Flyway flyway = new Flyway();
-		flyway.setDataSource(ds);
+		flyway.setDataSource(DBUtil.dataSource());
 		flyway.migrate();
 	}
+
+
+
 }
