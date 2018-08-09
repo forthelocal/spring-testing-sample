@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_example?useSSL=false
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+
+---
+spring:
+  profiles: dev
+  thymeleaf:
+    cache: false
+
+---
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_example_test?useSSL=false
+  mybatis:
+    mapper-locations: "jp.co.forthelocal.template.spring.domain.repositories"
+

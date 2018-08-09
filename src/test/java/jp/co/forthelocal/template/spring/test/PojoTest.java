@@ -1,14 +1,11 @@
 package jp.co.forthelocal.template.spring.test;
 
-import java.io.Reader;
 import java.sql.SQLException;
 
 import io.beanmother.core.ObjectMother;
 import jp.co.forthelocal.template.spring.domain.repositories.UserRepository;
-import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,10 +22,7 @@ public class PojoTest {
 
 	@BeforeAll
 	static void setUp() throws Exception {
-		// create an SqlSessionFactory
-		Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
-		sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-		reader.close();
+		sqlSessionFactory = DBUtil.sqlSessionFactory();
 	}
 
 	@BeforeEach
